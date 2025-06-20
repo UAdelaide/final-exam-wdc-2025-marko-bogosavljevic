@@ -7,17 +7,15 @@
 </head>
 
 <body>
-    <h1>dog of the day</h1>
-    <p>whats good gang lets show you a dog of the day</p>
+    <div id="app">
+        <h1>dog of the day</h1>
+        <p>whats good gang lets show you a dog of the day</p>
+    </div>
 
 </body>
 </html>
 
 <script>
-
-    /* global Vue */ // apparently adding this line is required for eslint to work
-
-
 const vueinst = Vue.createApp({
     data() {
         return {
@@ -42,6 +40,4 @@ const vueinst = Vue.createApp({
 }).mount('body');
 
 window.vueinst = vueinst;
-
-
 </script>
