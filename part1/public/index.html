@@ -21,41 +21,7 @@
 const vueinst = Vue.createApp({
     data() {
         return {
-            show_menu: true,
-            spotifyConnected: false,
-            spotifyError: null,
-            timerRunning: false,
-            loggedIn: false,
-            username: null,
-            avatar: '/images/default-avatar.png',
-            song_info: 'No song playing',
-            showProfileDropdown: false,
-            playlistModalVisible: false,
-            playlist_name: '',
-            spotify_id: '',
-            selectedTheme: 0,
-            themes: [
-                {
-                    id: 0,
-                    name: 'Sunset',
-                    background: '/images/backgrounds/sunset1.png'
-                },
-                {
-                    id: 1,
-                    name: 'Japanese Dark',
-                    background: '/images/backgrounds/japanese-dark.jpg'
-                },
-                {
-                    id: 2,
-                    name: 'Japanese Light',
-                    background: '/images/backgrounds/japanese-light.png'
-                }
-            ],
-            currentPlaylist: null,
-            userPlaylists: [],
-            curatedPlaylists: [],
-            spotifyUserPlaylists: [],
-            showSpotifyPlaylists: false
+            
         };
     },
     methods: {
