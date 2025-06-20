@@ -51,7 +51,7 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [walkrequests] = await db.execute('SELECT WalkRequests.request_id, ;');
+    const [walkrequests] = await db.execute('SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests;');
     res.json(walkrequests);
   } catch (err) {
     res.status(500).json({ error: 'failed' });
