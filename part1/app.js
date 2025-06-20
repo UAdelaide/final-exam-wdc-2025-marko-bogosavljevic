@@ -51,7 +51,7 @@ app.get('/api/dogs', async (req, res) => {
 
 app.get('/api/walkrequests/open', async (req, res) => {
   try {
-    const [walkrequests] = await db.execute('SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username FROM WalkRequests INNER JOIN Dogs ON Dogs.;');
+    const [walkrequests] = await db.execute('SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username FROM WalkRequests INNER JOIN Dogs ON Dogs.dog_id = WalkRequests.dog_id INNER JOIN Users ON Users.user_id = Dogs.owner_id WHERE WalkRequests.status = "open";');
     res.json(walkrequests);
   } catch (err) {
     res.status(500).json({ error: 'failed' });
