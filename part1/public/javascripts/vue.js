@@ -12,7 +12,7 @@ const vueinst = Vue.createApp({
             })
             .then((res) => res.json())
             .then((data) => {
-                img_src = data.message
+                this.img_src = data.message;
             });
         }
     },
