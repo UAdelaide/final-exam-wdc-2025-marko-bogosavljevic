@@ -61,7 +61,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [walkers] = await db.execute('SELECT Users.username, COUNT(WalkRatings.rating) AS total_ratings, AVG(WalkRatings.rating) AS average_rating, COUNT(WalkRatings.rating_id) AS completed_walks FROM WalkRatings INNER JOIN Users ON WalkRatings.walker_id = Users.user_id WHERE WalkRatings.walker_id = 2;');
+    const [walkers] = await db.execute('SELECT Users.username, COUNT(WalkRatings.rating) AS total_ratings, AVG(WalkRatings.rating) AS average_rating, COUNT(WalkRatings.rating_id) AS completed_walks FROM WalkRatings INNER JOIN Users ON WalkRatings.walker_id = Users.user_id;');
     res.json(walkers);
   } catch (err) {
     res.status(500).json({ error: 'failed' });
