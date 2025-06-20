@@ -4,7 +4,10 @@ body {
 
 * {
   color: #888;
+  font-size: 1vh;
 }
+
+
 
 a {
   color: #00B7FF;
@@ -16,6 +19,5 @@ img {
 }
 
 button {
-    font-size: 1vh;
     background: #999;
 }
