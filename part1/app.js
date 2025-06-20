@@ -24,7 +24,9 @@ app.use('/users', usersRouter);
 
 
 
-app.get('/api/dogs')
+app.get('/api/dogs', function() {
+
+});
 
 
 
