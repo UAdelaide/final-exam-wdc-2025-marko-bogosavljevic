@@ -60,7 +60,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [walkers] = await db.execute('SELECT Users.username, Count(WalkRatings.rating) AS total_ratings, ACVG(WalkRatings.rating) AS average_rating, COUNT(WalkRatings.rating_id);');
+    const [walkers] = await db.execute('SELECT Users.username, Count(WalkRatings.rating) AS total_ratings, ACVG(WalkRatings.rating) AS average_rating, COUNT(WalkRatings.rating_id) AS ;');
     res.json(walkers);
   } catch (err) {
     res.status(500).json({ error: 'failed' });
