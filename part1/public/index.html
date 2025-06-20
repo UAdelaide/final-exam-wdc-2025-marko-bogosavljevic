@@ -26,11 +26,13 @@ const vueinst = Vue.createApp({
     },
     methods: {
         getDog() {
-            fetch("ttps://dog.ceo/api/breeds/image/random", {
+            fetch('https://dog.ceo/api/breeds/image/random', {
                 method: 'POST',
                 credentials: 'include'
             })
-            .then
+            .then((res) => {
+
+            })
         }
     },
     mounted() {
