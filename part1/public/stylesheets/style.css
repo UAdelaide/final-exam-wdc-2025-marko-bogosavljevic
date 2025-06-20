@@ -3,7 +3,7 @@ body {
 }
 
 * {
-  color: #999;
+  color: #888;
 }
 
 a {
@@ -17,4 +17,5 @@ img {
 
 button {
     font-size: 1vh;
+    background: none;
 }
