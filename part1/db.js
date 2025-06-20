@@ -1,12 +1,11 @@
 const mysql = require('mysql2/promise');
 const dotenv = require('dotenv');
 
-// Load environment variables
 dotenv.config();
 
 const pool = mysql.createPool({
   host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'lockedinuser',
+  user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'glockedin',
   database: process.env.DB_NAME || 'lockedin',
   waitForConnections: true,
