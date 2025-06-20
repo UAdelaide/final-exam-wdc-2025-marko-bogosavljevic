@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+img {
+        width: 5000px;
+        height: 5000px;
+    }
+
+    button {
+        font-size: 1vh;
+    }
