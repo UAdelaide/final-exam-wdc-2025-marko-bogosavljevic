@@ -1,6 +1,5 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: 
 }
 
 a {
@@ -8,10 +7,10 @@ a {
 }
 
 img {
-        width: 5000px;
-        height: 5000px;
-    }
+    width: 5000px;
+    height: 5000px;
+}
 
-    button {
-        font-size: 1vh;
-    }
+button {
+    font-size: 1vh;
+}
