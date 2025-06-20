@@ -7,7 +7,9 @@ body {
   font-size: 1vh;
 }
 
-
+h1 {
+  font-size: 4vh;
+}
 
 a {
   color: #00B7FF;
