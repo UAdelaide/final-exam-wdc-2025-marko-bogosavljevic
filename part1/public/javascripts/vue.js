@@ -7,8 +7,7 @@ const vueinst = Vue.createApp({
     methods: {
         getDog() {
             fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'POST',
-                credentials: 'include'
+                method: 'POST'
             })
             .then((res) => res.json())
             .then((data) => {
