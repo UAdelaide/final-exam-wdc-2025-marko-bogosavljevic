@@ -19,7 +19,7 @@ const vueinst = Vue.createApp({
         },
 
         toggleMenu1 {
-
+            return
         },
         toggleMenu2 {
 
