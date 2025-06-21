@@ -103,6 +103,7 @@
           try {
             const res = await fetch('/api/users/getmydogs');
             var val = await res.json();
+            console.log(val);
             dogs.value = await res.json();
             console.log(dogs.value);
           } catch (err) {
