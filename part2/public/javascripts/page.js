@@ -194,7 +194,7 @@ function login(){
         }
     };
 
-    // xmlhttp.open("POST", "/users/login", true);
+    // xmlhttp.open("POST", "/users/login", true); -- changed so that its api/users instead of users
     xmlhttp.open("POST", "api/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
     xmlhttp.send(JSON.stringify(user));
