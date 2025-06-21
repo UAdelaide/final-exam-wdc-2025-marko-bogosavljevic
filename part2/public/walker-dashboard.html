@@ -46,7 +46,9 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const res = await fetch('api/users/me')
+        const res = await fetch('api/users/me');
+        if (!res.ok) throw new Error('failed to load users/me');
+        
 
 
         async function loadWalkRequests() {
