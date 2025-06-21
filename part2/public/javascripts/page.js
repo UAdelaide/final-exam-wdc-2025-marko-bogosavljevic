@@ -213,8 +213,8 @@ function logout(){
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-
+        if (this.readyState == 4 && this.status == 200) { // if its ok then set to homepage
+            window.location.href = "/";
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Logout failed");
         }
