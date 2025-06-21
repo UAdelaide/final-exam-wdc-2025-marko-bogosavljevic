@@ -128,6 +128,7 @@
         onMounted(async () => {
           loadWalks();
           const res = await fetch('/api/users/getmydogs');
+          if (!res.ok) throw new Error(result.error || 'Error submitting walk request');
           const dogs = await res.json();
         });
 
