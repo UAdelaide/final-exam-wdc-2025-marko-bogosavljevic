@@ -16,9 +16,10 @@
             <button @click="toggleMenu2">{{ showMenu2 ? 'Hide Menu' : 'Show Menu'}}</button>
             <div v-if="showMenu2">
                 <button @click="toggleMenu3">{{ showMenu3 ? 'Hide Menu' : 'Show Menu'}}</button>
-                <div v-if="showMenu3"></div>
-                <img :src="img_src">
-                <button @click="getDog()" tabindex="-1">get dog</button>
+                <div v-if="showMenu3">
+                    <img :src="img_src">
+                    <button @click="getDog()" tabindex="-1">get dog</button>
+                </div>
             </div>
         </div>
     </div>
