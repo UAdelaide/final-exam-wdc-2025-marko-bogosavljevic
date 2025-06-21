@@ -52,7 +52,7 @@
           const res = await fetch('api/users/me');
           if (!res.ok) throw new Error('failed to load users/me');
           var val = await res.json();
-          user =
+          user = val.user
         }
 
 
