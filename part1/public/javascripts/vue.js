@@ -1,7 +1,8 @@
 const vueinst = Vue.createApp({
     data() {
         return {
-            img_src: ""
+            img_src: "",
+            
         };
     },
     methods: {
