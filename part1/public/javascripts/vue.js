@@ -18,13 +18,13 @@ const vueinst = Vue.createApp({
             });
         },
 
-        toggleMenu1 {
-            return
+        toggleMenu1() {
+            showMenu1 = !showMenu1;
         },
-        toggleMenu2 {
+        toggleMenu2() {
 
         },
-        toggleMenu3 {
+        toggleMenu3() {
 
         }
     },
