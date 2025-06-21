@@ -10,11 +10,21 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(cookieParser());
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'glockedinsecret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure: false, // true if using https
+        httpOnly: true, // make cookie inaccessible via javascript (helps prevent XSS)
+        // sameSite: 'lax',
+        maxAge: 24 * 60 * 60 * 1000 // 1 day
+    }
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const cookieParser = require('cookie-parser');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
