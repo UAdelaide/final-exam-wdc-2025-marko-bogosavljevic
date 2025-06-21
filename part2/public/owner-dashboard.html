@@ -136,9 +136,7 @@
 
         onMounted(async () => {
           loadWalks();
-          const res = await fetch('/api/users/getmydogs');
-          if (!res.ok) throw new Error(result.error || 'error getting dogs');
-          dogs = await res.json();
+          loadDogs();
         });
 
         return {
