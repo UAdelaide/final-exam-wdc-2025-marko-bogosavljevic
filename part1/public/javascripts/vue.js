@@ -2,7 +2,9 @@ const vueinst = Vue.createApp({
     data() {
         return {
             img_src: "",
-            
+            showMenu1: false,
+            showMenu2: false,
+            showMenu3: false
         };
     },
     methods: {
