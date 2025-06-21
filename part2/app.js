@@ -11,13 +11,12 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(cookieParser());
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'glockedinsecret',
+    secret: 'exam',
     resave: false,
     saveUninitialized: false,
     cookie: {
         secure: false, // true if using https
-        httpOnly: true, // make cookie inaccessible via javascript (helps prevent XSS)
-        // sameSite: 'lax',
+        httpOnly: true,
         maxAge: 24 * 60 * 60 * 1000 // 1 day
     }
 }));
