@@ -55,7 +55,9 @@
             var val = await res.json();
             user = val.user
 
-          } catch (error) {}
+          } catch (err) {
+            error.value = err.message;
+          }
         }
 
 
