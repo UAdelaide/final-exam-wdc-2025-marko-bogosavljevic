@@ -189,11 +189,11 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             // get response
             var response = JSON.parse(this.responseText);
-            alert("Welcome "+response.user.username); // because response is in {message, user} 
-            if (response.user.role === "owner") {
+            alert("Welcome "+response.user.username); // because response is in {message, user} get user.username
+            if (response.user.role === "owner") { // if owner redirect to ownerdashboard
                 window.location.href = "owner-dashboard.html";
             }
-            if (response.user.role === "walker") {
+            if (response.user.role === "walker") { // if walker redirect to walkerdashboard
                 window.location.href = "walker-dashboard.html";
             }
         } else if (this.readyState == 4 && this.status >= 400) {
