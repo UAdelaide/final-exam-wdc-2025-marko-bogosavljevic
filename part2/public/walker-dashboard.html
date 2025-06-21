@@ -46,14 +46,13 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        var user = 0;
 
         async function getCurrentUser() {
           try {
             const res = await fetch('api/users/me');
             if (!res.ok) throw new Error('failed to load users/me');
             var val = await res.json();
-            user = val.user
+            return val.user
 
           } catch (err) {
             error.value = err.message;
@@ -74,7 +73,7 @@
 
         async function applyToWalk(requestId) {
           try {
-            const user 
+            const user = await getCurrentUser();
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
