@@ -83,7 +83,7 @@ router.get('/dogs', async (req, res) => {
 
 router.get('/getmydogs', async (req, res) => {
   try {
-    const [dog_info] = await db.execute('SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE Dogs.owner_id = ?;',
+    const [dog_info] = await db.execute('SELECT Dogs.name AS dog_name, Dogs.dog_id, Dogs.size, Users.username AS owner_username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE Dogs.owner_id = ?;',
       [req.session.user.user_id]
     );
     res.json(dog_info);
