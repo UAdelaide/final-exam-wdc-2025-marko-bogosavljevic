@@ -49,10 +49,15 @@
         var user = 0;
 
         async function getCurrentUser() {
-          const res = await fetch('api/users/me');
-          if (!res.ok) throw new Error('failed to load users/me');
-          var val = await res.json();
-          user = val.user
+          try {
+            const res = await fetch('api/users/me');
+            if (!res.ok) throw new Error('failed to load users/me');
+            var val = await res.json();
+            user = val.user
+
+          } catch (error) {
+            
+          }
         }
 
 
