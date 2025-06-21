@@ -16,10 +16,16 @@ const vueinst = Vue.createApp({
             .then((data) => {
                 this.img_src = data.message;
             });
-        }
+        },
 
         toggleMenu1 {
-            
+
+        },
+        toggleMenu2 {
+
+        },
+        toggleMenu3 {
+
         }
     },
     mounted() {
