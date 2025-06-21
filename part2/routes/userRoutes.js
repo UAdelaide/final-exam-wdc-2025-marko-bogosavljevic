@@ -35,7 +35,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login (dummy version)
+// POST login (changed version)
 router.post('/login', async (req, res) => {
   const { user, pass } = req.body; // get username and password instead of email
 
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
     console.log(rows);
 
-    req.session.user = rows[0];
+    req.session.user = rows[0]; // this was added to add to session
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
