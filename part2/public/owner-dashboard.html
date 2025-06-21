@@ -86,7 +86,7 @@
         });
 
         const walks = ref([]);
-        var dogs = [];
+        const dogs = ref([]);
         const message = ref('');
         const error = ref('');
 
@@ -102,9 +102,9 @@
         async function loadDogs() {
           try {
             const res = await fetch('/api/getmydogs');
-            walks.value = await res.json();
+            dogs.value = await res.json();
           } catch (err) {
-            error.value = 'Failed to load walk requests';
+            error.value = 'Failed to load dog requests';
           }
         }
 
